@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="text-align:center ;">Guess the number!</h1>
+<div class=""><p style="font-family:'Times New Roman', Times, serif ; font-size: 30px; text-align: center;">I am thinking of a number between 1-100 . Can you guess what it is??</p>
+    <label style="margin-left: 253px ; font-size: 24px;">My Guess : <input type="text" id="r1"> </label>
+        <button onclick="rand()" style="margin-left:367px ;margin-top:10px ;height:32px ;width: 147px;background-color:rgb(218, 196, 196);border: 2px solid;color: rgb(5, 5, 5);">   Check my guess</button>
+    </p>
+</div>
+
+    <script>
+        var a = Math.floor(Math.random()*100)+1
+        var count=0;
+        console.log(a)
+        function rand(){
+            count++;
+            if(count<5){
+            
+            
+                var b =document.getElementById("r1").value
+                if(b==a){
+                           alert("the numbers are same")
+                           document.getElementById("r1").disabled = true;
+                           }
+                else if( b>a){
+                        
+                         alert("The entered number is larger ")
+    
+                       }
+                else {
+                           alert("The entered number is smaller ")
+    
+                        }}
+
+            else{
+                alert("The chance over and the number is "+a)
+
+            }            
+
+                        
+            
+
+        
+        
+    
+        }
+    </script>
+    
+</body>
+</html>
